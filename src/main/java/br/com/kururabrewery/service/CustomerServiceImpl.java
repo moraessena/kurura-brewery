@@ -1,5 +1,6 @@
 package br.com.kururabrewery.service;
 
+import br.com.kururabrewery.web.model.BeerDto;
 import br.com.kururabrewery.web.model.CustomerDto;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +22,10 @@ public class CustomerServiceImpl implements CustomerService {
                 .id(UUID.randomUUID())
                 .customerName("Jonh Doe")
                 .build();
+    }
+
+    @Override
+    public void updateCustomer(BeerDto beerDto) {
+        // TODO: update customer
     }
 }
