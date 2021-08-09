@@ -6,7 +6,9 @@ import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.UUID;
 
 @RestController
@@ -25,9 +27,10 @@ public class BeerController {
     }
 
     @PostMapping
-    public ResponseEntity createBeer(@RequestBody BeerDto beerDto) {
+    public ResponseEntity<BeerDto> createBeer(@RequestBody BeerDto beerDto) {
         BeerDto savedDto = beerService.createBeer(beerDto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedDto);
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedDto.getId()).toUri();
+        return ResponseEntity.status(HttpStatus.CREATED).location(location).body(savedDto);
     }
 
 }
