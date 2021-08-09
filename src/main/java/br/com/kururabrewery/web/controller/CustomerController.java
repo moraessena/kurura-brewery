@@ -34,7 +34,7 @@ public class CustomerController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<Void> updateBeer(@PathVariable("id") UUID id, @RequestBody CustomerDto customerDto) {
+    public ResponseEntity<Void> updateCustomer(@PathVariable("id") UUID id, @RequestBody CustomerDto customerDto) {
         customerService.updateCustomer(customerDto);
         return ResponseEntity.noContent().build();
     }
