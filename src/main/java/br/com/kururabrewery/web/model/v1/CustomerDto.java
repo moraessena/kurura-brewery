@@ -1,4 +1,4 @@
-package br.com.kururabrewery.web.model;
+package br.com.kururabrewery.web.model.v1;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

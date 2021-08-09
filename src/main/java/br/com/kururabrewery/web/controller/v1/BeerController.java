@@ -1,8 +1,7 @@
-package br.com.kururabrewery.web.controller;
+package br.com.kururabrewery.web.controller.v1;
 
-import br.com.kururabrewery.service.BeerService;
-import br.com.kururabrewery.web.model.BeerDto;
-import org.apache.coyote.Response;
+import br.com.kururabrewery.service.v1.BeerService;
+import br.com.kururabrewery.web.model.v1.BeerDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

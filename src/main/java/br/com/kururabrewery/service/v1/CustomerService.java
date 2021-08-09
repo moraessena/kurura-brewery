@@ -1,7 +1,6 @@
-package br.com.kururabrewery.service;
+package br.com.kururabrewery.service.v1;
 
-import br.com.kururabrewery.web.model.BeerDto;
-import br.com.kururabrewery.web.model.CustomerDto;
+import br.com.kururabrewery.web.model.v1.CustomerDto;
 
 import java.util.UUID;
 

@@ -1,6 +1,5 @@
 package br.com.kururabrewery.web.controller.v2;
 
-import br.com.kururabrewery.service.BeerService;
 import br.com.kururabrewery.service.v2.BeerServiceV2;
 import br.com.kururabrewery.web.model.v2.BeerDtoV2;
 import org.springframework.http.HttpStatus;

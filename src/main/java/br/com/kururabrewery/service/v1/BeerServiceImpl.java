@@ -1,6 +1,6 @@
-package br.com.kururabrewery.service;
+package br.com.kururabrewery.service.v1;
 
-import br.com.kururabrewery.web.model.BeerDto;
+import br.com.kururabrewery.web.model.v1.BeerDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
