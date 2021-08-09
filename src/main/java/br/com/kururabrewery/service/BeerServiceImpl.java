@@ -24,4 +24,9 @@ public class BeerServiceImpl implements BeerService {
                 .beerStyle("Pale Ale")
                 .build();
     }
+
+    @Override
+    public void updateBeer(BeerDto beerDto) {
+        // TODO: update beer
+    }
 }
