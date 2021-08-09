@@ -33,4 +33,10 @@ public class CustomerController {
         return ResponseEntity.status(HttpStatus.CREATED).location(location).body(savedDto);
     }
 
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Void> updateBeer(@PathVariable("id") UUID id, @RequestBody CustomerDto beerDto) {
+        customerService.updateCustomer(beerDto);
+        return ResponseEntity.noContent().build();
+    }
+
 }
