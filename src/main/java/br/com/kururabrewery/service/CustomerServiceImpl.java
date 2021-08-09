@@ -25,7 +25,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void updateCustomer(BeerDto beerDto) {
+    public void updateCustomer(CustomerDto beerDto) {
         // TODO: update customer
     }
 
