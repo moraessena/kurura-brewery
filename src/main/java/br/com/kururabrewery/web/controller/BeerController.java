@@ -39,4 +39,10 @@ public class BeerController {
         return ResponseEntity.noContent().build();
     }
 
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> deleteBeer(@PathVariable("id") UUID id) {
+        beerService.deleteBeer(id);
+        return ResponseEntity.accepted().build();
+    }
+
 }
