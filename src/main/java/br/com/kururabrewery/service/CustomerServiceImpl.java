@@ -28,4 +28,9 @@ public class CustomerServiceImpl implements CustomerService {
     public void updateCustomer(BeerDto beerDto) {
         // TODO: update customer
     }
+
+    @Override
+    public void deleteCustomer(UUID id) {
+        // TODO: delete a customer
+    }
 }
