@@ -27,15 +27,15 @@ public class CustomerController {
     }
 
     @PostMapping
-    public ResponseEntity<CustomerDto> createCustomer(@RequestBody CustomerDto beerDto) {
-        CustomerDto savedDto = customerService.createCustomer(beerDto);
+    public ResponseEntity<CustomerDto> createCustomer(@RequestBody CustomerDto customerDto) {
+        CustomerDto savedDto = customerService.createCustomer(customerDto);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedDto.getId()).toUri();
         return ResponseEntity.status(HttpStatus.CREATED).location(location).body(savedDto);
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<Void> updateBeer(@PathVariable("id") UUID id, @RequestBody CustomerDto beerDto) {
-        customerService.updateCustomer(beerDto);
+    public ResponseEntity<Void> updateBeer(@PathVariable("id") UUID id, @RequestBody CustomerDto customerDto) {
+        customerService.updateCustomer(customerDto);
         return ResponseEntity.noContent().build();
     }
 
